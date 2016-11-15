@@ -1,5 +1,7 @@
 ActiveAdmin.register Note do
 
+ permit_params :body, :location, :device, :dtg
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
