@@ -1,6 +1,6 @@
 class TypesController < ApplicationController
   def index
-    @types = Type.all
+    @types = Type.page(params[:page])
 
     render("types/index.html.erb")
   end

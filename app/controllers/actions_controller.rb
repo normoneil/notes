@@ -1,6 +1,6 @@
 class ActionsController < ApplicationController
   def index
-    @actions = Action.all
+    @actions = Action.page(params[:page])
 
     render("actions/index.html.erb")
   end

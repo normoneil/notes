@@ -1,6 +1,6 @@
 class ResultsController < ApplicationController
   def index
-    @results = Result.all
+    @results = Result.page(params[:page])
 
     render("results/index.html.erb")
   end

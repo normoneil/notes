@@ -1,6 +1,6 @@
 class MetadataController < ApplicationController
   def index
-    @metadata = Metadatum.all
+    @metadata = Metadatum.page(params[:page])
 
     render("metadata/index.html.erb")
   end

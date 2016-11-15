@@ -1,6 +1,6 @@
 class ExtConnectionsController < ApplicationController
   def index
-    @ext_connections = ExtConnection.all
+    @ext_connections = ExtConnection.page(params[:page])
 
     render("ext_connections/index.html.erb")
   end

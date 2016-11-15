@@ -1,6 +1,6 @@
 class DecisionsController < ApplicationController
   def index
-    @decisions = Decision.all
+    @decisions = Decision.page(params[:page])
 
     render("decisions/index.html.erb")
   end
