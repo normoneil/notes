@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1>
+    Ext connections
+    <a href="/ext_connections/new" class="btn btn-lg btn-success">New Ext connection</a>
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Actions</th>
+      </tr>
+
+      <% @ext_connections.each do |ext_connection| %>
+      <tr>
+        <td>
+          <a href="/ext_connections/<%= ext_connection.id %>" class="btn btn-primary">Show</a>
+          <a href="/ext_connections/<%= ext_connection.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_ext_connection/<%= ext_connection.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

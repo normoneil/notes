@@ -1,0 +1,28 @@
+<!-- Validation failure messages -->
+<% if @ext_connection.errors.any? %>
+  <% @ext_connection.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Edit Ext Connection #<%= @ext_connection.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/update_ext_connection/<%= @ext_connection.id %>" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <button class="btn btn-warning">
+        Update Ext Connection
+      </button>
+      or
+      <a href="/ext_connections/<%= @ext_connection.id %>">Cancel</a>
+    </form>
+  </div>
+</div>

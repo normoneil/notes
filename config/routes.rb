@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Ext_connection resource:
+  # CREATE
+  get "/ext_connections/new", :controller => "ext_connections", :action => "new"
+  post "/create_ext_connection", :controller => "ext_connections", :action => "create"
+
+  # READ
+  get "/ext_connections", :controller => "ext_connections", :action => "index"
+  get "/ext_connections/:id", :controller => "ext_connections", :action => "show"
+
+  # UPDATE
+  get "/ext_connections/:id/edit", :controller => "ext_connections", :action => "edit"
+  post "/update_ext_connection/:id", :controller => "ext_connections", :action => "update"
+
+  # DELETE
+  get "/delete_ext_connection/:id", :controller => "ext_connections", :action => "destroy"
+  #------------------------------
+
   # Routes for the Connection resource:
   # CREATE
   get "/connections/new", :controller => "connections", :action => "new"
