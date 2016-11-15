@@ -21,7 +21,7 @@
         <td><%= type.note_id %></td>
         <td><%= type.body %></td>
         <td><%= type.list %></td>
-        <td><%= type.picture %></td>
+        <td><img src='<%= type.picture %>' class='img-responsive'></td>
         <td>
           <a href="/types/<%= type.id %>" class="btn btn-primary">Show</a>
           <a href="/types/<%= type.id %>/edit" class="btn btn-warning">Edit</a>
